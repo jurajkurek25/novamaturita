@@ -1,77 +1,40 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 
 export default function LoginPage() {
-  const router = useRouter();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setError(null);
-    setLoading(true);
+  async function handleGoogle() {
     const supabase = createClient();
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
-    if (error) {
-      setError("Nesprávny e-mail alebo heslo.");
-    } else {
-      router.push("/dashboard");
-      router.refresh();
-    }
-    setLoading(false);
+    await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: `${window.location.origin}/auth/callback`,
+      },
+    });
   }
 
   return (
     <div className="w-full max-w-md bg-slate-800 rounded-2xl p-8 shadow-xl space-y-6">
       <div className="text-center">
-        <h1 className="text-2xl font-bold text-white">Prihlásenie</h1>
-        <p className="text-slate-400 text-sm mt-1">NovaMaturita</p>
+        <h1 className="text-2xl font-bold text-white">NovaMaturita</h1>
+        <p className="text-slate-400 text-sm mt-1">Príprava na ústnu maturitu s AI</p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium text-slate-300 mb-1">E-mail</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="w-full bg-slate-700 border border-slate-600 rounded-lg px-3 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="vas@email.sk"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-slate-300 mb-1">Heslo</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            className="w-full bg-slate-700 border border-slate-600 rounded-lg px-3 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="••••••••"
-          />
-        </div>
-        {error && <p className="text-red-400 text-sm">{error}</p>}
-        <button
-          type="submit"
-          disabled={loading}
-          className="w-full bg-blue-600 hover:bg-blue-500 disabled:opacity-50 py-2.5 rounded-lg font-semibold text-white transition-colors"
-        >
-          {loading ? "Prihlasujem..." : "Prihlásiť sa"}
-        </button>
-      </form>
+      <button
+        onClick={handleGoogle}
+        className="w-full flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-4 rounded-lg transition-colors"
+      >
+        <svg width="20" height="20" viewBox="0 0 48 48">
+          <path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34.5 6.5 29.5 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.9z"/>
+          <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 13 24 13c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34.5 6.5 29.5 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
+          <path fill="#4CAF50" d="M24 44c5.4 0 10.3-2 14-5.2l-6.5-5.5C29.6 35 26.9 36 24 36c-5.2 0-9.6-3.3-11.3-8H6.1C9.4 35.6 16.2 44 24 44z"/>
+          <path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.3-2.3 4.2-4.2 5.5l6.5 5.5C41.5 36.3 44 30.6 44 24c0-1.3-.1-2.7-.4-3.9z"/>
+        </svg>
+        Prihlásiť sa cez Google
+      </button>
 
-      <p className="text-center text-slate-400 text-sm">
-        Nemáš účet?{" "}
-        <Link href="/register" className="text-blue-400 hover:underline">
-          Registruj sa
-        </Link>
+      <p className="text-center text-slate-500 text-xs">
+        Pri prvom prihlásení dostaneš 10 kreditov zdarma
       </p>
     </div>
   );

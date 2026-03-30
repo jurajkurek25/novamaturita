@@ -11,16 +11,10 @@ export default function HomePage() {
         </p>
         <div className="flex gap-4 justify-center pt-4">
           <Link
-            href="/register"
+            href="/login"
             className="bg-blue-600 hover:bg-blue-500 px-8 py-3 rounded-lg font-semibold transition-colors"
           >
             Začať zadarmo
-          </Link>
-          <Link
-            href="/login"
-            className="border border-slate-500 hover:border-slate-300 px-8 py-3 rounded-lg font-semibold transition-colors"
-          >
-            Prihlásiť sa
           </Link>
         </div>
         <p className="text-slate-400 text-sm">10 kreditov zdarma pri registrácii · 1 skúšanie = 10 kreditov</p>
