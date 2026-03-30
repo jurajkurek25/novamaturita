@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaMaturita – AI príprava na ústnu maturitu</title>
+  <meta name="description" content="Precvič si ústnu maturitu so slovenčiny, angličtiny a odborných predmetov s AI skúšajúcim. Všetko hlasom, ako na skutočnej maturite." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#" class="nav__logo">Nova<span>Maturita</span></a>
+      <div class="nav__links">
+        <a href="#ako-funguje">Ako funguje</a>
+        <a href="#predmety">Predmety</a>
+        <a href="#ceny">Ceny</a>
+      </div>
+      <a href="/login" class="btn btn--sm">Prihlásiť sa</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__badge">AI skúšajúci · Hlas · Slovenčina & Angličtina</div>
+      <h1 class="hero__title">
+        Ústna maturita?<br />
+        <span class="gradient-text">Precvič si ju s AI.</span>
+      </h1>
+      <p class="hero__sub">
+        NovaMaturita simuluje skutočnú ústnu skúšku — AI skúšajúci ti vylosuje tému,
+        pýta doplňujúce otázky a na konci dá hodnotenie. Všetko hlasom.
+      </p>
+      <div class="hero__cta">
+        <a href="/login" class="btn btn--primary btn--lg">Začať zadarmo</a>
+        <a href="#ako-funguje" class="btn btn--ghost btn--lg">Pozrieť demo ↓</a>
+      </div>
+      <p class="hero__note">10 kreditov zdarma · bez kreditnej karty</p>
+    </div>
+
+    <div class="hero__visual">
+      <div class="mockup">
+        <div class="mockup__bar">
+          <span></span><span></span><span></span>
+          <span class="mockup__url">maturitka.eu</span>
+        </div>
+        <div class="mockup__screen">
+          <div class="chat">
+            <div class="chat__msg chat__msg--ai">
+              <div class="chat__avatar">AI</div>
+              <div class="chat__bubble">
+                Dobrý deň. Vaša téma je <strong>Romantizmus v slovenskej literatúre</strong>. Začnite prosím charakteristikou tohto literárneho smeru.
+              </div>
+            </div>
+            <div class="chat__msg chat__msg--user">
+              <div class="chat__bubble">
+                Romantizmus je literárny smer 19. storočia, ktorý sa vyznačuje dôrazom na cit, individualitu a národné uvedomenie...
+              </div>
+              <div class="chat__avatar">Ty</div>
+            </div>
+            <div class="chat__msg chat__msg--ai">
+              <div class="chat__avatar">AI</div>
+              <div class="chat__bubble">
+                Výborne. Ktorý autor štúrovskej generácie je podľa vás najvýznamnejší a prečo?
+              </div>
+            </div>
+            <div class="chat__recording">
+              <div class="chat__mic">
+                <span class="pulse"></span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 1a4 4 0 0 1 4 4v6a4 4 0 0 1-8 0V5a4 4 0 0 1 4-4zm-1 17.93V21H9v2h6v-2h-2v-2.07A8 8 0 0 0 20 11h-2a6 6 0 0 1-12 0H4a8 8 0 0 0 7 7.93z"/></svg>
+              </div>
+              <span>Hovoríte...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats__inner">
+      <div class="stat">
+        <span class="stat__num">20–25</span>
+        <span class="stat__label">minút simulácie</span>
+      </div>
+      <div class="stat__divider"></div>
+      <div class="stat">
+        <span class="stat__num">2+</span>
+        <span class="stat__label">vstavané predmety</span>
+      </div>
+      <div class="stat__divider"></div>
+      <div class="stat">
+        <span class="stat__num">∞</span>
+        <span class="stat__label">vlastné predmety</span>
+      </div>
+      <div class="stat__divider"></div>
+      <div class="stat">
+        <span class="stat__num">100%</span>
+        <span class="stat__label">hlasom</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- AKO FUNGUJE -->
+  <section class="section" id="ako-funguje">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__tag">Ako to funguje</p>
+        <h2 class="section__title">Štyri kroky k lepšej maturite</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step__num">01</div>
+          <div class="step__icon">📚</div>
+          <h3>Vyber predmet</h3>
+          <p>Slovenský jazyk a literatúra, anglický jazyk — alebo si pridaj vlastný s tvojimi okruhmi.</p>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__num">02</div>
+          <div class="step__icon">🎲</div>
+          <h3>AI vylosuje tému</h3>
+          <p>Presne ako na skutočnej maturite — náhodné losovanie z tvojich okruhov.</p>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__num">03</div>
+          <div class="step__icon">🎤</div>
+          <h3>Hovoríš hlasom</h3>
+          <p>AI skúšajúci počúva, kladie doplňujúce otázky a reaguje — presne ako živý učiteľ.</p>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__num">04</div>
+          <div class="step__icon">📊</div>
+          <h3>Dostaneš hodnotenie</h3>
+          <p>Záverečná známka 1–5, silné stránky, čo zlepšiť. Vieš kde si stojíš.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREDMETY -->
+  <section class="section section--dark" id="predmety">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__tag">Predmety</p>
+        <h2 class="section__title">Vstavané + vlastné</h2>
+        <p class="section__sub">Slovenčina a angličtina sú pripravené hneď. Odborné predmety si pridáš sám.</p>
+      </div>
+      <div class="subjects">
+        <div class="subject subject--builtin">
+          <div class="subject__badge">Vstavaný</div>
+          <div class="subject__icon">🇸🇰</div>
+          <h3>Slovenský jazyk<br />a literatúra</h3>
+          <p>15 okruhov · od antiky po súčasnosť</p>
+          <ul class="subject__topics">
+            <li>Romantizmus v slov. literatúre</li>
+            <li>Realizmus v slov. próze</li>
+            <li>Svetová literatúra 20. stor.</li>
+            <li>Jazykové štýly a slohové postupy</li>
+            <li>+ 11 ďalších okruhov</li>
+          </ul>
+        </div>
+        <div class="subject subject--builtin">
+          <div class="subject__badge">Vstavaný</div>
+          <div class="subject__icon">🇬🇧</div>
+          <h3>Anglický jazyk</h3>
+          <p>15 okruhov · úroveň B2</p>
+          <ul class="subject__topics">
+            <li>Education and school life</li>
+            <li>Technology and the internet</li>
+            <li>Environment and nature</li>
+            <li>Work and career</li>
+            <li>+ 11 ďalších okruhov</li>
+          </ul>
+        </div>
+        <div class="subject subject--custom">
+          <div class="subject__badge subject__badge--custom">Vlastný</div>
+          <div class="subject__icon">➕</div>
+          <h3>Tvoj odborný predmet</h3>
+          <p>Grafika, Ekonomika, Dejepis, ...</p>
+          <ul class="subject__topics">
+            <li>Sám zadáš okruhy a obsah</li>
+            <li>AI sa naučí z tvojich materiálov</li>
+            <li>Neobmedzený počet predmetov</li>
+            <li>Môžeš kedykoľvek upraviť</li>
+          </ul>
+          <a href="/login" class="btn btn--outline btn--sm" style="margin-top:1rem">Pridať predmet</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__tag">Funkcie</p>
+        <h2 class="section__title">Prečo NovaMaturita?</h2>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <div class="feature__icon">🎙️</div>
+          <h3>Plne hласové</h3>
+          <p>Hovoríš mikrofónom, AI ti odpovedá hlasom. Žiadne písanie — presne ako na skutočnej maturite.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">🤖</div>
+          <h3>Skutočná AI konverzácia</h3>
+          <p>Claude AI nehrá len "chatbota" — reaguje na to čo hovoríš, kladie inteligentné otázky.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">🎲</div>
+          <h3>Náhodné losovanie</h3>
+          <p>Nikdy nevieš ktorá téma padne — pripravíš sa na všetky scenáre.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">📈</div>
+          <h3>Konkrétne hodnotenie</h3>
+          <p>Dostaneš known 1–5 + popis silných a slabých stránok. Vieš presne na čom popracovať.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">📁</div>
+          <h3>Vlastné materiály</h3>
+          <p>Zadaj si vlastné okruhy s obsahom — AI sa prispôsobí tvojim školským materiálom.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">🔒</div>
+          <h3>Bezpečné prihlásenie</h3>
+          <p>Prihlásenie cez Google účet — žiadne ďalšie heslá, žiadna registrácia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CENY -->
+  <section class="section section--dark" id="ceny">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__tag">Ceny</p>
+        <h2 class="section__title">Jednoduchý kreditový systém</h2>
+        <p class="section__sub">1 skúšanie = 10 kreditov · pri registrácii dostaneš 10 kreditov zdarma</p>
+      </div>
+      <div class="pricing">
+        <div class="plan">
+          <h3 class="plan__name">Štarter</h3>
+          <div class="plan__price">2,99 €</div>
+          <div class="plan__credits">50 kreditov</div>
+          <ul class="plan__features">
+            <li>✓ 5 skúšaní</li>
+            <li>✓ Všetky predmety</li>
+            <li>✓ Vlastné okruhy</li>
+            <li>✓ Hodnotenie po každom skúšaní</li>
+          </ul>
+          <a href="/login" class="btn btn--outline">Vybrať</a>
+        </div>
+        <div class="plan plan--popular">
+          <div class="plan__popular-badge">Najpopulárnejší</div>
+          <h3 class="plan__name">Štandard</h3>
+          <div class="plan__price">6,99 €</div>
+          <div class="plan__credits">150 kreditov</div>
+          <ul class="plan__features">
+            <li>✓ 15 skúšaní</li>
+            <li>✓ Všetky predmety</li>
+            <li>✓ Vlastné okruhy</li>
+            <li>✓ Hodnotenie po každom skúšaní</li>
+            <li>✓ História skúšaní</li>
+          </ul>
+          <a href="/login" class="btn btn--primary">Vybrať</a>
+        </div>
+        <div class="plan">
+          <h3 class="plan__name">Prémiový</h3>
+          <div class="plan__price">17,99 €</div>
+          <div class="plan__credits">500 kreditov</div>
+          <ul class="plan__features">
+            <li>✓ 50 skúšaní</li>
+            <li>✓ Všetky predmety</li>
+            <li>✓ Vlastné okruhy</li>
+            <li>✓ Hodnotenie po každom skúšaní</li>
+            <li>✓ História skúšaní</li>
+          </ul>
+          <a href="/login" class="btn btn--outline">Vybrať</a>
+        </div>
+      </div>
+      <p class="pricing__note">Kredity nevypršia · Platba kartou cez Stripe · Bezpečné</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__tag">FAQ</p>
+        <h2 class="section__title">Časté otázky</h2>
+      </div>
+      <div class="faq">
+        <div class="faq__item">
+          <button class="faq__q">Potrebujem nejaký špeciálny softvér?</button>
+          <div class="faq__a">Nie. NovaMaturita beží v prehliadači — stačí Chrome alebo Edge. Potrebuješ len mikrofón (vstavaný v notebooku funguje).</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q">Ako pridám vlastný predmet?</button>
+          <div class="faq__a">Po prihlásení choď do sekcie Predmety → Pridať vlastný predmet. Zadáš názov a jednotlivé okruhy s ich obsahom. AI sa naučí z tvojich materiálov.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q">Ako dlho trvá jedno skúšanie?</button>
+          <div class="faq__a">Štandardne 20–25 minút — rovnako ako skutočná ústna maturita. Skúšanie môžeš ukončiť aj skôr.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q">Aký jazyk hovorí AI skúšajúci?</button>
+          <div class="faq__a">Pre slovenský jazyk a literatúru hovorí po slovensky, pre anglický jazyk po anglicky. Vlastné predmety si nastavíš podľa potreby.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q">Vypršia mi kredity?</button>
+          <div class="faq__a">Nie. Kredity nemajú dátum expirácie — zostanú na tvojom účte kým ich nespotrebuješ.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q">Je to skutočne podobné maturite?</button>
+          <div class="faq__a">Áno. AI je natrénované aby sa správalo ako skutočný maturitný skúšajúci — reaguje na tvoje odpovede, kladie doplňujúce otázky a hodnotí slovne aj číslom.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BOTTOM -->
+  <section class="cta-section">
+    <div class="container cta-section__inner">
+      <h2>Priprav sa na maturitu dnes.</h2>
+      <p>Zaregistruj sa za 30 sekúnd cez Google a dostaneš prvé skúšanie zadarmo.</p>
+      <a href="/login" class="btn btn--primary btn--lg">Začať zadarmo →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="nav__logo">Nova<span>Maturita</span></span>
+      <p class="footer__copy">© 2025 NovaMaturita · Všetky práva vyhradené</p>
+      <div class="footer__links">
+        <a href="#">Podmienky</a>
+        <a href="#">Ochrana údajov</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
